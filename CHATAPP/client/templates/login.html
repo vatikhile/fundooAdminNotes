@@ -1,0 +1,42 @@
+<html ng-app="chatapp">
+    <head>
+        <script src="../angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+        <script src="../controller/controlLogin.js"></script>
+<Link href="../css/main.css" rel="stylesheet">
+</head>
+<body ng-controller="conntrolLogin">
+    
+        <section id= main>
+                <article>
+                    <main>
+                       
+                            <h1><b>chat app</b></h1>
+<!-- <h2><p>please fill the details to register</p></h2> -->
+<form name="myform" ng-controller="controlLogin">
+    <h2><b>Username</b></h2>
+
+     <!-- <label for="firstname"><b>FirstName</b></label> -->
+     <input type="text" name="email"ng-model="email" placeholder="enter username" autocomplete="on" required>
+    <h2><b>password</b></h2>
+    
+     <input type="password"name="password" ng-model="password"placeholder="enter the password"minlength="8" autocomplete="on"tittle="Password contain atleast 8 or more characters"required>
+     
+     <button type="submit" value="login" ng-click="login()" class="login-button">Login</button>
+     <div class="butt">
+         <p>Don't have an account yet? click on register to create new account :)<br> <br>
+            <a href="http://localhost:3000/#!?register">Register</a>
+            </p>
+            </div>
+            </form>
+            </main>
+            <label>
+                <span ui-sref="forgotPassword">
+                    <a href ="http://localhost:3000/#!?forgotPassword">Forgot password</a>
+        
+
+
+     </article>
+     </section>
+     </body>
+     </html>
