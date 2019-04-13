@@ -10,7 +10,7 @@ var userSchema = new mongoschema({
 },{ versionKey: '_somethingElse' },
 // new Schema({..}, { versionKey: '_somethingElse' })
     {
-        timestamp: false
+        timestamp: true
     });
 function usermodel() {
 
@@ -103,26 +103,19 @@ usermodel.prototype.forgotPassword = (body, callback) => {
     });
 }
 usermodel.prototype.resetPassword = (body, callback) => {   
-    user.find({ 'email': body.email }, (err, data) => {
+    user.find({ 'user_id': body.user_id }, (err, data) => {
         if (err) {
             console.log("Error in register user schema ");
            return callback(err);
-        } else if (data.length > 0) {
-            response = { "error": true, "message": "Email already exists ", "errorCode": 404 };
-            return callback(response);
+        
         } else {
-            const newUser = new user({
-                'firstname': body.firstname,
-                'lastname': body.lastname,
-                'email': body.email,
-                'password': hash(body.password)
-            });
-            newUser.save((err, result) => {
+            const newpassword=hash(body.password)
+            user.updateOne({ 'user_id': body.user_id }, { password: newpassword },(err, result) => {
                 if (err) {
-                    console.log("error in model file", err);
+                    console.log("error in reset", err);
                     return callback(err);
                 } else {
-                    console.log("data save successfully", result);
+                    console.log("reset successfully", result);
                     return callback(null, result);
                 }
             })
