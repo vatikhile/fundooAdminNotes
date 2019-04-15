@@ -1,32 +1,34 @@
-var app =angular.module('chatapp',[])
-app.config(function($stateprovider,$urlRouterProvider)
+
+ var app = angular.module('chatapp', ['ui.router', 'btford.socket-io']);
+
+app.config(function($stateProvider, $urlRouterProvider)
 {
    
-    $stateprovider.state('login',{
+    $stateProvider.state('login',{
         url:'/login',
         templateUrl:'templates/login.html',
         controller:'controlLogin'
     })
 
-    $stateprovider.state('register',{
+    $stateProvider.state('register',{
         url:'/register',
         templateUrl:'templates/register.html',
         controller:'controlRegister'
     })
 
-    $stateprovider.state('forgotPassword',{
+    $stateProvider.state('forgotPassword',{
         url:'/forgotPassword',
-        templateUrl:'templates/.forgotPassword.html',
+        templateUrl:'templates/forgotPassword.html',
         controller:'controlForgotPassword'
     })
 
-    $stateprovider.state('resetPassword',{
+    $stateProvider.state('resetPassword',{
         url:'/resetPassword',
         templateUrl:'templates/resetPassword.html',
         controller:'controlResetPassword'
     })
 
-    $stateprovider.state('dashboard',{
+    $stateProvider.state('dashboard',{
         url:'/dashboard',
         templateUrl:'templates/dashboard.html',
         controller:'chatController'

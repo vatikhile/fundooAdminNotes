@@ -6,7 +6,7 @@ module.exports.register= (req, res) => {
     req.checkBody('firstname', 'Firstname is not valid').isLength({ min: 3 }).isAlpha();
     req.checkBody('lastname', 'Lastname is not valid').isLength({ min: 3 }).isAlpha();
     req.checkBody('email', 'Email is not valid').isEmail();
-    req.checkBody('password', 'password is not valid').isLength({ min: 4 }).equals(req.body.password);
+    req.checkBody('password', 'password is not valid').isLength({ min: 8 }).equals(req.body.password);
     var errors = req.validationErrors();
     var response = {};
     if (errors) {
@@ -129,3 +129,20 @@ module.exports.resetPassword = (req, res) => {
 
     }
 };
+
+module.exports.getAllUser = (req,res) => {
+    userService.getAllUser(req, (err, data) => {
+        var response = {};
+        if (err) {
+            return callback(err);
+        } else {
+          //  console.log("log==>",data);
+            response.success = true;
+            response.result = data;
+            res.status(200).send(response);
+        
+        }
+    })
+};
+
+

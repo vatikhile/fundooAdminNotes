@@ -43,6 +43,8 @@ usermodel.prototype.register = (body, callback) => {
                 "password": hash(body.password)
 
             });
+           
+            
             newUser.save((err, result) => {
 
                 if (err) {
@@ -124,15 +126,15 @@ usermodel.prototype.resetPassword = (body, callback) => {
 
 }
 
-// usermodel.prototype.getAllUser = (req, callback) => {
-//     user.find({}, (err, data) => {
-//         if (err) {
-//             callback("error is in model" + err)
-//         } else {
-//             callback(null, data);
-//         }
-//     })
-// }
+usermodel.prototype.getAllUser = (req, callback) => {
+    user.find({}, (err, data) => {
+        if (err) {
+            callback("error is in model" + err)
+        } else {
+            callback(null, data);
+        }
+    })
+}
 
 
 
