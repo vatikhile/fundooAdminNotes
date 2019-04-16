@@ -1,60 +1,70 @@
 
 body {font-family: Arial, Helvetica, sans-serif;
+
    background-image: url("chat.png"); 
  height: 500px; /* You must set a specified height */
- background-position: center; /* Center the image */
+ background-position:center; /*Center the image*/
  background-repeat: no-repeat; /* Do not repeat the image */
  background-size: cover;
-  }
+ 
+
+}
 /* *  {box-sizing: border-box}  */
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
+/* input[type=text], input[type=password] {
  width: 100%;
  padding: 15px;
  margin: 2px 0 22px 0;
  display: inline-block;
  border: none;
  background:white;
-}
-
+} */
+/* 
 input[type=text]:focus, input[type=password]:focus {
  background-color: rgb(255, 255, 255);
  outline: none;
-}
+} */
 /* Set a style for all buttons */
 button {
- background-color: rgb(172, 156, 12);
- color:black;
+ /* background-color: rgb(172, 156, 12); */
+ /* color:black; */
  font-size: 150%;
- padding: 14px 20px;
- margin: 8px 0;
+ padding: 14px;
+ margin: 8px auto;
  border: none;
  cursor: pointer;
- width: 50%;
+ width: 80%;
  opacity: 0.9;
+ background-color: teal;
+color: white;
+border-radius: 50px;
+font-size:20px;
+/* margin: 15px; */
 }
 
 button:hover {
  opacity:1;
+ background: #00aeef;   
+ box-shadow: 0 0 15px;  
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+/* .cancelbtn {
  padding: 14px 20px;
- background-color: #f44336;
-}
+ background-color:  rgb(206, 186, 7);
+} */
 
 /* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
+/* .cancelbtn, .signupbtn {
  float: left;
  width: 50%;
-}
+} */
 
 /* Add padding to container elements */
 .container {
- padding: 16px;
- font-size: 20px;
+   padding: 10px;
+ font-size: 30px;
  text-align:left;
  color : rgb(206, 186, 7);
 
@@ -69,41 +79,282 @@ button:hover {
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
+/* @media screen and (max-width: 300px) {
  .cancelbtn, .signupbtn {
     width: 50%;
  }
+} */
+/* .form-div {
+   /* margin: auto; */
+   /* width: 1000%; */
+   /* border: 3px solid #73AD21; */
+   
+  /* border: 3px solid #73AD21; */
+  
+ 
+  .form-div{
+     /* border:2px solid black;  */
+padding: 200px;
+/* position:fixed; */
+bottom: -400;
+  right: 500;
+width: 100px;
+
+background: white url("css/chat.png")no-repeat scroll top;  
+background-color: rgba(0,0,0,0.5);
+text-align:center; 
+margin:150px auto;
+border-radius: 10px;
+box-shadow: 0 0 15px #00aeef;
+
 }
 
+form-div img{
+   width: 100px;
+body {font-family: Arial, Helvetica, sans-serif;
 
-
-#main{
-width: 500px;
-margin: 20px auto;
-background:gray;
-padding: 20px;
-/* border-radius: 1px; */
-opacity: 0.96;
-text-align: center;
+   background-image: url("chat.png"); 
+ height: 500px; /* You must set a specified height */
+ background-position:center; /*Center the image*/
+ background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover;
+ 
 
 }
+/* *  {box-sizing: border-box}  */
+
+/* Full-width input fields */
+/* input[type=text], input[type=password] {
+ width: 100%;
+ padding: 15px;
+ margin: 2px 0 22px 0;
+ display: inline-block;
+ border: none;
+ background:white;
+} */
+/* 
+input[type=text]:focus, input[type=password]:focus {
+ background-color: rgb(255, 255, 255);
+ outline: none;
+} */
+/* Set a style for all buttons */
+button {
+ /* background-color: rgb(172, 156, 12); */
+ /* color:black; */
+ font-size: 150%;
+ padding: 14px;
+ margin: 8px auto;
+ border: none;
+ cursor: pointer;
+ width: 80%;
+ opacity: 0.9;
+ background-color: teal;
+color: white;
+border-radius: 50px;
+font-size:20px;
+/* margin: 15px; */
+}
+
+button:hover {
+ opacity:1;
+ background: #00aeef;   
+ box-shadow: 0 0 15px;  
+}
+
+/* Extra styles for the cancel button */
+/* .cancelbtn {
+ padding: 14px 20px;
+ background-color:  rgb(206, 186, 7);
+} */
+
+/* Float cancel and signup buttons and add an equal width */
+/* .cancelbtn, .signupbtn {
+ float: left;
+ width: 50%;
+} */
+
+/* Add padding to container elements */
+.container {
+   padding: 10px;
+ font-size: 30px;
+ text-align:left;
+ color : rgb(206, 186, 7);
+
+}
+
+/* Clear floats */
+.clearfix::after {
+ content: "";
+ clear: both;
+ display: table;
+
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+/* @media screen and (max-width: 300px) {
+ .cancelbtn, .signupbtn {
+    width: 50%;
+ }
+} */
+/* .form-div {
+   /* margin: auto; */
+   /* width: 1000%; */
+   /* border: 3px solid #73AD21; */
+   
+  /* border: 3px solid #73AD21; */
+  
+ 
+  .form-div{
+     /* border:2px solid black;  */
+padding: 200px;
+/* position:fixed; */
+bottom: -400;
+  right: 500;
+width: 100px;
+
+background: white url("css/chat.png")no-repeat scroll top;  
+background-color: rgba(0,0,0,0.5);
+text-align:center; 
+margin:150px auto;
+border-radius: 10px;
+box-shadow: 0 0 15px #00aeef;
+
+}
+
+.form-div img{
+   width: 100px;
+   margin-top:-50px;
+ 
+}
+input[type='text'],
+input[type='password']
+{
+    text-align:center;
+  border:none;
+  outline:none;
+  background:transparent;
+  color: white;
+  border-bottom:3px solid teal;
+  width: 200px
+}  
+input[type='text']:focus,
+input[type='password']:focus
+{
+   border-bottom:3px solid #00aeef;
+}
+::placeholder{
+   color:lightgray;
+}
+input[type='submit']
+{
+background-color: teal;
+color: white;
+border: none;
+font-size:20px;
+margin: 15px;
+
+}
+/* .form-div h1{
+ 
+} */
+
+#main{ 
+width:400px; 
+margin: 20px auto; 
+ /* background:gray;  */
+ padding: 20px; 
+ /* border-radius: 1px;  */
+ opacity: 0.96; 
+  text-align: center;  
+
+ }
 #main h1{
-font-size: 50px;
+font-size: 30px;
 text-align: center;
 letter-spacing: 3.1px;
 font-weight: bolder;
-color : rgb(206, 186, 7);
+color:white;
+margin-top:10px;
 }
 #main h2{
-   letter-spacing: 1.1px;
+   letter-spacing: 1.0px;
    font-weight: bolder;
-   color:rgb(206, 186, 7);
+   color:white
 }
 #main label{
  text-align:justify;
 }
+ .butt {
+ padding: 16px;
+ font-size: 20px;
+ text-align:center;
+ color : rgb(206, 186, 7);
+ 
 
-.butt {
+}
+
+   margin-top:-50px;
+ 
+}
+input[type='text'],
+input[type='password']
+{
+    text-align:center;
+  border:none;
+  outline:none;
+  background:transparent;
+  color: white;
+  border-bottom:3px solid teal;
+  width: 200px
+}  
+input[type='text']:focus,
+input[type='password']:focus
+{
+   border-bottom:3px solid #00aeef;
+}
+::placeholder{
+   color:lightgray;
+}
+input[type='submit']
+{
+background-color: teal;
+color: white;
+border: none;
+font-size:20px;
+margin: 15px;
+
+}
+/* .form-div h1{
+ 
+} */
+
+#main{ 
+width:400px; 
+margin: 20px auto; 
+ /* background:gray;  */
+ padding: 20px; 
+ /* border-radius: 1px;  */
+ opacity: 0.96; 
+  text-align: center;  
+
+ }
+#main h1{
+font-size: 30px;
+text-align: center;
+letter-spacing: 3.1px;
+font-weight: bolder;
+color:white;
+margin-top:10px;
+}
+#main h2{
+   letter-spacing: 1.0px;
+   font-weight: bolder;
+   color:white
+}
+#main label{
+ text-align:justify;
+}
+ .butt {
  padding: 16px;
  font-size: 20px;
  text-align:center;

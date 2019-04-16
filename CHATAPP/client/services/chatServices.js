@@ -9,7 +9,8 @@ app.service('chatServices', function ($http) {
                 }
             }).then(
                 function successCallback(response) {//call back function of http sevice
-                    console.log("response",response)
+
+                    // console.log("responsesqdvdhujc7fik18728=>",response)
                     $scope.allUser = response.data.result;
                     console.log(response.data.result);
                     

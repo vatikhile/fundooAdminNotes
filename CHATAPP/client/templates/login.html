@@ -5,13 +5,15 @@
         <script src="../controller/controlLogin.js"></script>
 <Link href="../css/main.css" rel="stylesheet">
 </head>
-<body ng-controller="conntrolLogin">
+<body ng-controller="controlLogin">
     
         <section id= main>
                 <article>
                     <main>
-                       
+                        <div class="form-div">
+                                <img src="css/chat5.png">
                             <h1><b>chat app</b></h1>
+                           
 <!-- <h2><p>please fill the details to register</p></h2> -->
 <form name="myform" ng-controller="controlLogin">
     <h2><b>Username</b></h2>
@@ -24,17 +26,23 @@
      
      <button type="submit" value="login" ng-click="login()" class="login-button">Login</button>
      <div class="butt">
-         <p>Don't have an account yet? click on register to create new account :)<br> <br>
+         <p>Don't have an account yet? click on register to create new account<br> <br>
             <a href="http://localhost:3000/#!/register">Register</a>
             </p>
             </div>
-            </form>
-            </main>
+            
+    
+            
             <label>
                 <span ui-sref="forgotPassword">
                     <a href ="http://localhost:3000/#!/forgotPassword">Forgot password</a>
-        
-
+                    </span>
+                    </label>  
+                                   
+    </form>
+    </div>
+        </main>
+                
 
      </article>
      </section>

@@ -3,11 +3,12 @@ app.service('serviceLogin', function ($http, $location) {
 
     this.login = function (data, $scope) {
         $http({
-            method: 'POST',
+            method: 'POST',             
             url: 'http://localhost:3000/login',
             data: data,
         }).then(
             function successCallback(response) {
+//console.log("response:",response);
 
                 console.log("Login successfull at serviceLogin in client side");
                 var userid = response.data.message[0]._id;

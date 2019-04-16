@@ -1,6 +1,9 @@
-// var app = angular.module();
+
+//onsole.log("hdhfdhfvhd=>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
 app.controller('chatController', function ($scope, SocketService, $state, chatServices) {
+   
+    
     $scope.message = '';
     $scope.allUserArr = [];
     $scope.currentUserName = localStorage.getItem('name');
@@ -8,6 +11,8 @@ app.controller('chatController', function ($scope, SocketService, $state, chatSe
     $scope.receiverUserName = localStorage.getItem('rusername');
     var token = localStorage.getItem("token");
     console.log(token.exp);
+    console.log("effeglc");
+    
     if (token === null) {//if the token is null then redirects to login page
         $state.go('login');
     }

@@ -22,13 +22,13 @@
   }
   
   .user .chatMsg {
-    background: WHITE (255, 230, 3);
+    background: black(255, 230, 3);
     color: white(20, 5, 2);
     text-align: left;
   }
   
   .self .chatMsg {
-    color:WHITE (20, 5, 2);
+    color:black (20, 5, 2);
     text-align: right;
     background:rgb(136, 125, 24);
   }
@@ -40,7 +40,7 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 80%;
     opacity: 0.9;
   }
   
