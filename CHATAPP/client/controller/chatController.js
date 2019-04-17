@@ -22,6 +22,7 @@ app.controller('chatController', function ($scope, SocketService, $state, chatSe
                 if ($scope.allUserArr === undefined) {
                     $scope.allUserArr = message;//assigning message to variable
                 } else {
+                    console.log(message)
                     $scope.allUserArr.push(message);
                 }
             }
@@ -48,6 +49,7 @@ app.controller('chatController', function ($scope, SocketService, $state, chatSe
     }
     $scope.getUserMsg();
     try {
+        console.log("getnuswer")
         $scope.sendmessage = function () {//function to send the message
             var msg = {
                 'senderUserId': localStorage.getItem('userid'),

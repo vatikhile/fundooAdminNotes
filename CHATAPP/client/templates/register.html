@@ -9,21 +9,23 @@
                 <article>
                     <main>
                             <div class="form-div">
+                                    <img src="css/chat5.png">
                         <form name="myform"method="POST">
                             <h1><b>register</b></h1>
-                            <h2><p>please fill the details to register</p></h2>
+                            <h4><p>please fill the details to register</p></h4>
  <div class="container">
      <label for="firstname"><b>FirstName</b></label>
      <input type="text" placeholder="enter the first name"ng-model="firstname" required>
      <label for="lastname"><b>Lastname</b></label>
      <input type="text" placeholder="enter the last name"ng-model="lastname" required>
-     <label for="email"><b>email</b></label>
+     <label for="email"><b>Email</b></label>
      <input type="text" placeholder="enter the email"ng-model="email" required>
      <br>
      <label for="password"><b>Password</b></label>
      <input type="password" placeholder="enter the password"ng-model="password" required>
      </div>
      <button type="submit" value="Sign up" ng-click="register()" ng-disabled="myForm.$invalid">Register</button>
+     <a href="http://localhost:3000/#!/login">login</a>
      </form>
      </div>
      </main>

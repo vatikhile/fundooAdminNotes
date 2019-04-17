@@ -45,7 +45,7 @@ io.on('connection', function (socket) {
     console.log("socket is connected ");
     socket.on('createMessage',function(message)
     {
-        chatController.message(messsage,(err,data)=>
+        chatController.message(message,(err,data)=>
         {
 if (err)
 {

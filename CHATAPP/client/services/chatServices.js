@@ -3,16 +3,16 @@ app.service('chatServices', function ($http) {
         this.getAllUsers = function ($scope, usertoken) {
             $http({
                 method: 'GET',//assigning GET 
-                url: 'http://localhost:3000/getAllUser',
+                url: 'http://localhost:3000/auth/getAllUser',
                 headers: {
                     'token': usertoken,
                 }
             }).then(
                 function successCallback(response) {//call back function of http sevice
-
+                        
                     // console.log("responsesqdvdhujc7fik18728=>",response)
                     $scope.allUser = response.data.result;
-                    console.log(response.data.result);
+                    console.log("sdssssssssssssssss",response.data.result);
                     
                 },
                 function errorCallback(response) {
