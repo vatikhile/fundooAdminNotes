@@ -1,6 +1,6 @@
 const chatModel = require('../model/chatmodel');
 
-exports.addMessage = (req, callback) => {
+module.exports.addMessage = (req, callback) => {
 
     console.log("request in service");
 
@@ -18,15 +18,15 @@ exports.addMessage = (req, callback) => {
     })
 
 }
-exports.getUserMsg = (req, callback) => {
+module.exports.getUserMsg = (req, callback) => {
     
     chatModel.getUserMsg(req, (err, data) => {
         if (err) {
             console.log("chat services isn't working");
-            callback(err);
+            return callback(err);
         } else {
             console.log("chat service works")
-            callback(null, data);
+           return callback(null, data);
         }
     })
 }

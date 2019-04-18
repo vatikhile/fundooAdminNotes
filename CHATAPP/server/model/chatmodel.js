@@ -72,9 +72,10 @@ try {
     chatModel.prototype.getUserMsg = (req ,callback) => {
         chat.find({}, (err, data) => {
             if (err) {
-                callback(err)
+               return  callback(err)
             } else {
-                callback(null, data);
+                return callback(null, data);
+             
             }
 
         })

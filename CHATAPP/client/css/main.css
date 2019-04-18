@@ -96,7 +96,7 @@ text-shadow: 0 0 20px;
 input[type='submit']
 {
 background-color: teal;
-color: white;
+color: rgb(41, 29, 29);
 border: none;
 font-size:20px;
 margin: 15px;

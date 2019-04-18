@@ -1,4 +1,4 @@
-<html ng-controller="chatapp">
+    <html ng-controller="chatapp">
 
 <head>
     <link href="../css/dashboard.css" rel="stylesheet" type="text/css">
@@ -8,15 +8,16 @@
 
 <body ng-controller="chatController">
     <header>
-        <h1>CHAT APP</h1>
+        <h1><b>CHAT APP</b></h1>
         <span class="user">
-            <h5>Welcome<h2>{{currentUserName}}</h2>
-            </h5>
-        </span>
-        <button type="button" ng-click="logout()" class="logbutton">Logout</button>
+            <h5>Welcome</h5><h2>{{currentUserName}}</h2>
+            
+        </span><h6>
+        <button type="button" ng-click="logout()" class="logbutton">Logout</button></h6>
     </header>
 
     <section>
+        
         <nav>
             <ul>
                 <p><b>
@@ -24,7 +25,6 @@
                     </b></p>
 
             </ul>
-
             <p ng-repeat="x in allUser" ng-click="person(x)" ng-show="currentUserName!=x.firstname">
                 {{x.firstname}}</p>
         </nav>
@@ -43,6 +43,7 @@
                         <div class="chat self" ng-show="currentUser == chat.senderUserId">
                             <!-- <div class="user-photo"> <img src=""></div> -->
                             <p class="chatMsg"> {{chat.message}}</p>
+                            <!-- <span class="time-left"></span> -->
                         </div>
                     </div>
 

@@ -96,6 +96,7 @@ usermodel.prototype.forgotPassword = (body, callback) => {
         if (err) {
             return callback(err);
         } else if (data) {
+            console.log("data in models==>", data);
             console.log("data in models==>", data[0]._id);
 
             return callback(null, data)

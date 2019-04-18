@@ -9,11 +9,11 @@ app.service('chatServices', function ($http) {
                 }
             }).then(
                 function successCallback(response) {//call back function of http sevice
-                        
+
                     // console.log("responsesqdvdhujc7fik18728=>",response)
                     $scope.allUser = response.data.result;
-                    console.log("sdssssssssssssssss",response.data.result);
-                    
+                    console.log( response.data.result);
+
                 },
                 function errorCallback(response) {
                     console.log("registration Unsuccessful ");
@@ -31,16 +31,16 @@ app.service('chatServices', function ($http) {
             var usertoken = localStorage.getItem('token');
             $http({
                 method: 'GET',//assigning GET 
-                url: 'http://localhost:3000/auth/getUserMsg', 
+                url: 'http://localhost:3000/auth/getUserMsg',
                 headers: {
                     'token': usertoken,
                 }
             }).then(
                 function successCallback(response) {
-                    console.log(response.data.message);
+                    console.log(response.data.result);
 
-                    for (let i = 0; i < (response.data.message); i++) {  
-                        a = response.data.message[i];
+                    for (let i = 0; i < (response.data.result.length); i++) {
+                        a = response.data.result[i];
 
                         if (((localStorage.getItem('userid') == a.senderUserId) && (localStorage.getItem('ruserId') == a.receiverUserId)) || ((localStorage.getItem('userid') == a.receiverUserId && localStorage.getItem('ruserId') == a.senderUserId))) {
                             console.log("local user is ", localStorage.getItem('userid'), "a user is ", a.senderUserId, " local receiver id is ", localStorage.getItem('ruserId'), "  receiver is ", a.receiverUserId);
