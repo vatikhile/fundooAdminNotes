@@ -18,7 +18,7 @@ app.service('serviceRegister', function ($http, $location) {
 
             },
             function errorCallback(response) {
-
+            alert("register Unsuccessfull")
                 console.log("register Unsuccessfull ");
              $scope.message =response.data.message.message;
 

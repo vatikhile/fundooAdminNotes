@@ -6,7 +6,7 @@ module.exports.register= (req, res) => {
     req.checkBody('firstname', 'Firstname is not valid').isLength({ min: 3 }).isAlpha();
     req.checkBody('lastname', 'Lastname is not valid').isLength({ min: 3 }).isAlpha();
     req.checkBody('email', 'Email is not valid').isEmail();
-    req.checkBody('password', 'password is not valid').isLength({ min: 8 }).equals(req.body.password);
+    req.checkBody('password', 'password is not valid').isLength({ min: 8 }).equals(req.body.cpassword);
     var errors = req.validationErrors();
     var response = {};
     if (errors) {
@@ -58,77 +58,51 @@ module.exports.login = (req, res) => {
     }
 
 };
-module.exports. forgotPassword = (req, res) => {
-
-    req.checkBody('email', 'Email is not valid').isEmail();
-    var secret = "adcgfft";
-    var errors = req.validationErrors();
-    var response = {};
-    if (errors) {
-        response.success = false;
-        response.error = errors;
-        return res.status(422).send(response);
-    } else {
-        userService.forgotPassword(req.body, (err, data) => {
-            var responses = {};
-
-            if (err) {
-                return res.status(500).send({
-                    message: err
-                });
-            } else {
-                console.log(req.body);
-                responses.success = true;
-                responses.result = data;
-
-                console.log("data in controller=>", data[0]._id);
-
-
-                const payload = {
-                        user_id: data[0]._id
-                    }
-                    //  console.log(payload);
-                const obj = gentoken.GenerateToken(payload);
-                const url = `http://localhost:3000/resetPassword/${obj.token}`;
-                console.log("url in controller", url);
-
-                sendmail.sendEmailFunction(url,req.body.email);
-
-                res.status(200).send(url);
 
 
 
+exports.forgotPassword = (req, res) => {
+    var responseResult = {};
+    userService.forgotPassword(req.body, (err, result) => {
+        if (err) {
+            responseResult.success = false;
+            responseResult.error = err;
+            res.status(500).send(responseResult)
+        }
+        else {
+            responseResult.success = true;
+            responseResult.result = result;
+
+            const payload = {
+                user_id: responseResult.result._id
             }
-        });
-    }
-};
+            console.log(payload);
+            const obj = gentoken.GenerateToken(payload);
+            console.log("controller obj", obj);
+            const url = `http://localhost:3000/#!/resetPassword/${obj.token}`;
+            sendmail.sendEmailFunction(url,req.body.email);
+            //Send email using this token generated
+            res.status(200).send(url);
+        }
+    })
+}
+exports.resetPassword = (req, res) => {
+    var responseResult = {};
+    userService.resetPass(req, (err, result) => {
+        if (err) {
+            responseResult.success = false;
+            responseResult.error = err;
+            res.status(500).send(responseResult)
+        }
+        else {
+            console.log('in user ctrl token is verified giving response');
+            responseResult.success = true;
+            responseResult.result = result;
+            res.status(200).send(responseResult);
+        }
+    })
+}
 
-module.exports.resetPassword = (req, res) => {
-    console.log("inside forgotPassword");
-    req.checkBody('password', 'password is not valid').isLength({ min: 4 });
-    var errors = req.validationErrors();
-    var response = {};
-    if (errors) {
-        response.success = false;
-        response.error = errors;
-        return res.status(422).send(response);
-    } else {
-        userService.resetPassword(req.body, (err, data) => {
-            if (err) {
-                console.log(err);
-                return res.status(500).send({
-                    message: err
-                })
-            } else {
-                return res.status(200).send({
-                    message: data
-                });
-            }
-
-        });
-
-    }
-};
 
 module.exports.getAllUser = (req,res) => {
     userService.getAllUser(req, (err, data) => {

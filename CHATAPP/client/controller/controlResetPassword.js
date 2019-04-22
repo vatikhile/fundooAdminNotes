@@ -1,16 +1,17 @@
-app.controller('controlResetPassword', function ($scope, serviceResetPassword) {
+app.controller('controlResetPassword', function ($scope,$stateParams, serviceResetPassword) {
 
     // for registration form
     $scope.resetPassword = function () {
         var user = {
-            'password': $scope.password
+            'password': $scope.password,
+            'cpassword': $scope.cpassword
         }
 
         console.log("register calling", user);
-        if ($scope.password != $scope.password) {
+        if ($scope.password != $scope.cpassword) {
             $scope.message = "password not match ";
         } else {
-            serviceResetPassword.registerUser(user, $scope);
+            serviceResetPassword.resetPassword(user, $scope,$stateParams.token);
         }
     }
 });

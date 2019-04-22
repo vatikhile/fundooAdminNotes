@@ -10,7 +10,7 @@ app.service('chatServices', function ($http) {
             }).then(
                 function successCallback(response) {//call back function of http sevice
 
-                    // console.log("responsesqdvdhujc7fik18728=>",response)
+                    console.log("responsesqdvdhujc7fik18728=>",response.data.result)
                     $scope.allUser = response.data.result;
                     console.log( response.data.result);
 
@@ -37,7 +37,7 @@ app.service('chatServices', function ($http) {
                 }
             }).then(
                 function successCallback(response) {
-                    console.log(response.data.result);
+                    console.log("hhheueoehebfwjkbhfjkejkewjk++++++++++++++",response.data.result);
 
                     for (let i = 0; i < (response.data.result.length); i++) {
                         a = response.data.result[i];

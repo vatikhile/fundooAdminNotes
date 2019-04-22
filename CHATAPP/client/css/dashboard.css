@@ -22,7 +22,7 @@
     width: 100%;
     padding: 5px;
     margin: 0px, 0px, 0px;
-    border-radius: 15px;
+    border-radius: 1em 4em 1em 4em;;
     background-color:#93cfe2;
     font-size: 20px;
     border:none;
@@ -34,15 +34,20 @@
     color: white(20, 5, 2);
     text-align: left;
     background: #93cfe2;
-    box-shadow: 0 0 10px #93cfe2;
+    width: 300
+    /* box-shadow: 0 0 10px #93cfe2; */
 
   }
   
   .self .chatMsg {
     color:black (20, 5, 2);
-    text-align: right;
+    text-align: left;
     background: #00aeef;
-    box-shadow: 0 0 10px #00aeef;
+    /* width:-30; */
+    width:300;
+    margin-left:300
+    /* box-shadow: 0 0 10px #00aeef; */
+  
 
 
   }

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 var bcrypt = require('bcryptjs')
+var salt = 10;
 //create instance of schema
 var mongoschema = mongoose.Schema
 var userSchema = new mongoschema({
@@ -91,40 +92,35 @@ usermodel.prototype.login = (body, callback) => {
     }
 });
 }
-usermodel.prototype.forgotPassword = (body, callback) => {
-    user.find({ "email": body.email }, (err, data) => {
-        if (err) {
-            return callback(err);
-        } else if (data) {
-            console.log("data in models==>", data);
-            console.log("data in models==>", data[0]._id);
-
-            return callback(null, data)
-        } else {
-            return callback("Invalid User ");
+usermodel.prototype.forgotPassword=(data,callback)=>{
+    user.findOne({"email":data.email},(err,result)=>{
+        if(err) {
+            callback(err);
         }
-    });
+        else {
+            if(result!==null && data.email==result.email) {
+                callback(null,result);
+            }
+            else {
+                callback("inncorrect mail")
+            }
+        }
+    })
 }
-usermodel.prototype.resetPassword = (body, callback) => {   
-    user.find({ 'user_id': body.user_id }, (err, data) => {
-        if (err) {
-            console.log("Error in register user schema ");
-           return callback(err);
-        
-        } else {
-            const newpassword=hash(body.password)
-            user.updateOne({ 'user_id': body.user_id }, { password: newpassword },(err, result) => {
-                if (err) {
-                    console.log("error in reset", err);
-                    return callback(err);
-                } else {
-                    console.log("reset successfully", result);
-                    return callback(null, result);
-                }
-            })
-        }
-    });
+usermodel.prototype.updateUserPassword=(req,callback)=> {
+    console.log('in model--data:--',req.decoded);
+    console.log('in model--body:--',req.body);
 
+    let newpassword=bcrypt.hashSync(req.body.password,salt);
+    console.log(('new pass bcrypt--',newpassword));
+    user.updateOne({ _id:req.decoded.payload.user_id},{password:newpassword},(err,result)=>{
+        if(err) {
+            callback(err);
+        }
+        else {
+            callback(null,result);
+        }  
+    })   
 }
 
 usermodel.prototype.getAllUser = (req, callback) => {

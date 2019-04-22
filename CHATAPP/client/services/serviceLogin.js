@@ -22,7 +22,7 @@ app.service('serviceLogin', function ($http, $location) {
                 $location.path('/dashboard');
             },
             function errorCallback(response) {
-alert("login unsucessfully")
+              alert("login unsucessfully")
                 console.log("registration Unsuccessfull please check your username or password");
                 console.log(response);
                 $scope.loginMessage = 'EmailId or Password Incorrect ';

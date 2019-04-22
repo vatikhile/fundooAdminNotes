@@ -4,7 +4,7 @@ const dbConfig = require('./config/config');
 const mongoose = require('mongoose');
 const route = require('./routes/routes');
 const expressValidator = require('express-validator');
-const http= require('http') 
+const http= require('http');
 const cors=require('cors');
 
 
@@ -24,22 +24,15 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 
-
-
-
-
-// make server listen on port 3000
-
 app.use(express.static('../client')); 
 app.use('/', route) ;
 
+// make server listen on port 3000
 var server=app.listen(3000, () => {
     console.log("Server is listening on port 3000");
 });
 
     
-
-
 const io = require('socket.io')(server);
 io.on('connection', function (socket) {
     console.log("socket is connected ");
@@ -63,9 +56,6 @@ console.log('socket is disconnect');
     });
 });
 // define a simple route
-
-
-
 //app= express.createServer();
 
 // app.get('/', (req, res) => res.send('Hello World!'));
