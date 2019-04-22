@@ -1,3 +1,10 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    -controller.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 09/04/2019
+ **************************************************************************************************/
 var userService = require('../services/services');
 var jwt = require('jsonwebtoken');
 var gentoken = require('../middleware/token');

@@ -1,4 +1,10 @@
-
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - app.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 08/04/2019
+ **************************************************************************************************/
 const jwt = require('jsonwebtoken');
 module.exports = {
     GenerateToken(payload) {

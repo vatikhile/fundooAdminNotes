@@ -1,3 +1,10 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - app.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 15/04/2019
+ **************************************************************************************************/
 
  var app = angular.module('chatapp', ['ui.router', 'btford.socket-io']);
 

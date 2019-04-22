@@ -1,4 +1,10 @@
-debugger
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - servicesResetPassword.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 13/04/2019
+ **************************************************************************************************/
 app.service('serviceResetPassword', function ($http, $location) {
 
     this.resetPassword = function (data, $scope,token) {

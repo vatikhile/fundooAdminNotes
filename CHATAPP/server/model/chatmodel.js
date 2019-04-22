@@ -1,3 +1,10 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - chatmodel.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 09/04/2019
+ **************************************************************************************************/
 var mongoose = require('mongoose');
 
 var mongoSchema = mongoose.Schema;

@@ -1,6 +1,13 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - index.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 9/04/2019
+ **************************************************************************************************/
 const jwt = require('jsonwebtoken')
 exports.checkToken = (req, res, next) => {
-    var token1 = req.headers['token'];//decode token
+    var token1 = req.headers['token']; //decode token
     if (token1) {
         //verify secret and checks exp 
         jwt.verify(token1, 'secretkey',

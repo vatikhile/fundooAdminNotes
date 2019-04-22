@@ -1,4 +1,10 @@
-
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - authorization.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 08/04/2019
+ **************************************************************************************************/
 var express = require('express');
 
 var router = express.Router();

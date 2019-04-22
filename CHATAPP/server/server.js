@@ -1,3 +1,10 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - server.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 08/04/2019
+ **************************************************************************************************/
 const express = require('express');//use the express module
 const bodyParser = require('body-parser');
 const dbConfig = require('./config/config');

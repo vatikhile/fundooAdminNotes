@@ -1,3 +1,11 @@
+/*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - controlResetPassword.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 14/04/2019
+ **************************************************************************************************/
+
 app.controller('controlResetPassword', function ($scope,$stateParams, serviceResetPassword) {
 
     // for registration form

@@ -1,3 +1,10 @@
+ /*****************************************************************************************************
+ *@Purpose -CHATAPP
+ *@file    - routes.js
+ *@author  - Vaibhaw Tikhile <vaibhawatikhile@gmail.com>
+ *@version - 1.0
+ *@since   - 08/04/2019
+ **************************************************************************************************/
  const contuser = require('../controller/controller')
 const express = require('express')
 const router = express.Router();
