@@ -1,0 +1,60 @@
+.form1 {
+  justify-content: center;
+}
+
+.field {
+  width: 100%;
+  text-align: center;
+  margin-left: 300px;
+}
+// .card{
+// justify-content: center;
+// margin-top: 100px;
+// margin-left: 300px;
+// margin-right: 300px;
+// border: thin;
+// }
+// .p{
+
+//   justify-content: center;
+
+// }
+// .mat-card-title{
+//   justify-content: center;
+
+
+// }
+.content{
+font-size:10;
+
+}
+.card{
+  display:flex;
+  justify-content: center;
+ flex-direction:column;
+  margin-top: 100px;
+// margin-top: 100px;
+margin-left: 300px;
+margin-right: 300px;
+border-image-width:10;
+text-align: center;
+
+// margin: 5px;
+
+
+border-color: #d8dbdf;
+}
+
+.log{
+
+  display:flex;
+  justify-content: center;
+  background-color: transparent;
+
+}
+.buttonsize{
+width: 222px;
+margin-left: 0%;
+
+
+}

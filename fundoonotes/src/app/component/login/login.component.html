@@ -1,20 +1,49 @@
 
-   <!-- <form class="form1">
-     <mat-card> -->
-     <!-- <mat-card class="example"><form class="example-form"> -->
-        <!-- <mat-form-field class="example-full-width">
-          <input matInput placeholder="Favorite food" value="Sushi">
-        </mat-form-field>
-      <div>
-        <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Leave a comment"></textarea>
-        </mat-form-field>
-        </div>
+<body>
+  <!-- <form class="form1"> -->
+  <div class="card">
+    <mat-card >
+        <div class="content">
+      
+      <mat-card-title>FundooNotes</mat-card-title>
+      <mat-card-subtitle>
+      <h1>sign in <br>
+       with your fundoo account</h1> 
+      </mat-card-subtitle>
+ </div>
+        <!-- <mat-form-field class="field"> -->
+            <form class="form1">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email or password</mat-label>
+            <input matInput placeholder="Email or password">
+           
+          </mat-form-field></p>
+       
+          
+          <div>
+              <nav><a routerLink="/forgot"> forget password</a></nav><br />
+              <nav><a routerLink="/register">register</a></nav>
+  
+            </div>
+        
+      </form>
+      <mat-card-actions class="buttonSize">
+          <button class="buttonSize" mat-raised-button color="primary" (click)="onLogin()">Login</button>
+        </mat-card-actions>
+      </mat-card>
+      
+    
+  </div>
+</body>
 
+
+
+<!-- 
       </form>
       <div> -->
-          <form class="example-form">
-        <mat-form-field class="example-full-width">
+<!-- <form class="example-form">
+        <mat-form-field class="field1">
           <input matInput placeholder="Email" [formControl]="emailFormControl"
                  [errorStateMatcher]="matcher">
           <mat-hint>Errors appear instantly!</mat-hint>
@@ -25,7 +54,7 @@
             Email is <strong>required</strong>
           </mat-error>
         
-        </mat-form-field>
-      <!-- </div> -->
-      <!-- </mat-card>-->
-     </form> 
+        </mat-form-field> -->
+<!-- </div> -->
+<!-- </mat-card>-->
+<!-- </form>  -->

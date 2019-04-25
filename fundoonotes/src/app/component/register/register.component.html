@@ -1,21 +1,25 @@
-
-   <!-- <form class="form1">
-     <mat-card> -->
-     <!-- <mat-card class="example"><form class="example-form"> -->
-        <!-- <mat-form-field class="example-full-width">
-          <input matInput placeholder="Favorite food" value="Sushi">
-        </mat-form-field>
+<mat-card-content>
+    <form [formGroup]="loginForm">
+      <mat-form-field style="width: 222px" appearance="outline">
+        <mat-label>enter Email id</mat-label>
+        <input type="text" matInput [(ngModel)]="login.emailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+          title="provide valid email id" [ngModelOption]="{standalone: true}" placeholder="enter the email"
+          required />
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>enter password</mat-label>
+        <input [type]="hide ? 'password' : 'text'" matInput formControlName="password" [(ngModel)]="login.password"
+          [ngModelOption]="{standalone: true}" placeholder="enter the password" required />
+        <mat-icon matsuffix (click)="hide=!hide">{{hide? 'visibilityoff' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+      <br />
+      <mat-card-actions class="buttonSize">
+        <button class="buttonSize" mat-raised-button color="primary" (click)="onLogin()">Login</button>
+      </mat-card-actions>
       <div>
-        <mat-form-field class="example-full-width">
-          <textarea matInput placeholder="Leave a comment"></textarea>
-        </mat-form-field>
-        </div>
+        <nav><a routerLink="/forgot"> forget password</a></nav><br />
+        <nav><a routerLink=""> register</a></nav>
 
-      </form>
-      <div> -->
-          <!-- <div>
-              <mat-form-field class="example-full-width">
-                <textarea matInput placeholder="Leave a comment"></textarea>
-              </mat-form-field>
-              </div> -->
-              <P>sghcbh</P>
+      </div>
+  </mat-card-content>
