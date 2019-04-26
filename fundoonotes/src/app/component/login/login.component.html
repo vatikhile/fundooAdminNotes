@@ -1,41 +1,63 @@
+<!-- <div fxLayout="row" fxFlex="100" fxLayoutAlign="center center" style="height:100vh">
 
-<body>
-  <!-- <form class="form1"> -->
-  <div class="card">
-    <mat-card >
-        <div class="content">
-      
-      <mat-card-title>FundooNotes</mat-card-title>
-      <mat-card-subtitle>
-      <h1>sign in <br>
-       with your fundoo account</h1> 
-      </mat-card-subtitle>
- </div>
-        <!-- <mat-form-field class="field"> -->
-            <form class="form1">
-        <p>
-          <mat-form-field appearance="outline">
-            <mat-label>Email or password</mat-label>
-            <input matInput placeholder="Email or password">
-           
-          </mat-form-field></p>
-       
-          
-          <div>
-              <nav><a routerLink="/forgot"> forget password</a></nav><br />
-              <nav><a routerLink="/register">register</a></nav>
-  
-            </div>
-        
-      </form>
-      <mat-card-actions class="buttonSize">
-          <button class="buttonSize" mat-raised-button color="primary" (click)="onLogin()">Login</button>
-        </mat-card-actions>
-      </mat-card>
-      
+  <mat-card fxFlex="25" fxFlex.xs="98" fxFlex.lg="25" fxFlex.md="60" fxFlex.sm="90" class="example-card">
+    <mat-card-header>
     
+      <mat-card-title>FundooNotes</mat-card-title>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <div fxLayout="row" fxLayout.xs="column" >
+        <div fxFlex="50">
+          <mat-form-field appearance="outline" class="text">
+            <mat-label>Email or password</mat-label>
+            <input matInput fxFlex="35">
+
+          </mat-form-field>
+        </div>
+        <div fxFlex="25" >sgsg1</div>
+        <div fxFlex="25">sgsg2</div>
+      </div>
+
+    </mat-card-content>
+
+  </mat-card> -->
+<div fxFlex="100" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutGap="20px">
+  <mat-card fxFlex="35" fxFlex.xs="100" class="center1">
+<div  fxLayoutAlign="center"  class="header" >
+      <mat-card-header  >  
+  <mat-card-title >FundooNotes</mat-card-title>
+       </mat-card-header>
+ </div>
+    <mat-card-content >
+      <div fxLayout="column" fxLayoutGap="13px" >
+          <div fxFlex="25" fxLayoutAlign="center" class="subtitle1"> Sign in</div>
+          <div fxFlex="25"  fxLayoutAlign="center" class="subtitle2"> Use your Fundoo Acount</div>
+          </div>
+     
+<div fxLayoutAlign="center" fxLayoutGap="50px">
+<div><mat-form-field appearance="outline" class="text">
+  <mat-label>Email or phone</mat-label>
+  <input matInput >
+</mat-form-field>
+</div>
+</div>
+
+<div fxLayout.xs="column" fxLayoutGap="150px">
+   <div fxFlex="100" fxLayoutAlign="left"><button mat-button color="primary" routerLink='/forgot' class="color">Forgot email?</button>
+</div>
+<div fxFlex="100" fxLayoutAlign="left">
+    <button mat-button color="primary" routerLink='/register' class="color">Create account</button>
   </div>
-</body>
+</div>
+</mat-card-content>
+
+<mat-card-actions class="buttonSize">
+  <button class="buttonSize" mat-raised-button color="primary" (click)="onLogin()">Login</button>
+</mat-card-actions>
+
+</mat-card>
+</div>
 
 
 

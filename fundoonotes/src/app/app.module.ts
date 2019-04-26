@@ -13,7 +13,7 @@ import {MatCardModule} from '@angular/material/card';
 import { RegisterComponent } from './component/register/register.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [   
@@ -32,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon';
     MatInputModule,
     MatCardModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
