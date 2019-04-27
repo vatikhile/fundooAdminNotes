@@ -14,7 +14,7 @@ import { RegisterComponent } from './component/register/register.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
-
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [   
     AppComponent,
@@ -33,7 +33,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatCardModule,
     MatFormFieldModule,
     MatIconModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatRadioModule  
   ],
   providers: [],
   bootstrap: [AppComponent]

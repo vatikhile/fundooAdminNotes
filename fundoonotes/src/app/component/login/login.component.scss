@@ -4,14 +4,23 @@
 
 .center1{
 margin-left: 1%;
-margin-top: 5%;
+// margin-top: 5%;
 color: #202124;
 border: solid 0.3px;
 height: 510px;
 box-shadow: #202124;
 border-radius: 10px; 
 }
+@media screen and (max-width: 2560px) {
+  .button{
+    float: none;
+    width: 100%;
+  }
+}
+// .button{
 
+//   width:10px;
+// }
 .content{
 
 size: 10000cm;
@@ -50,10 +59,14 @@ color:#202124;
   
   font-size: 16px;
   color:#202124;
-  
-
 
 }
+// .buttonsize{
+//   width: 222px;
+// color:red;
+  
+  
+//   }
 
 
 
@@ -105,11 +118,5 @@ color:#202124;
 //   display:flex;
 //   justify-content: center;
 //   background-color: transparent;
-
-// }
-// .buttonsize{
-// width: 222px;
-// margin-left: 0%;
-
 
 // }
