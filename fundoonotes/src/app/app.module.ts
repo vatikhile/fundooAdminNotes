@@ -5,6 +5,7 @@ import {MatButtonModule, MatCheckboxModule}from '@angular/material';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './component/login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
 import { ForgotComponent } from './component/forgot/forgot.component';  
@@ -34,7 +35,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatFormFieldModule,
     MatIconModule,
     FlexLayoutModule,
-    MatRadioModule  
+    MatRadioModule  ,
+    FormsModule,
+     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,30 +1,6 @@
-<!-- <mat-card-content>
-    <form [formGroup]="loginForm">
-      <mat-form-field style="width: 222px" appearance="outline">
-        <mat-label>enter Email id</mat-label>
-        <input type="text" matInput [(ngModel)]="login.emailId" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          title="provide valid email id" [ngModelOption]="{standalone: true}" placeholder="enter the email"
-          required />
-      </mat-form-field>
-      <br />
-      <mat-form-field appearance="outline">
-        <mat-label>enter password</mat-label>
-        <input [type]="hide ? 'password' : 'text'" matInput formControlName="password" [(ngModel)]="login.password"
-          [ngModelOption]="{standalone: true}" placeholder="enter the password" required />
-        <mat-icon matsuffix (click)="hide=!hide">{{hide? 'visibilityoff' : 'visibility'}}</mat-icon>
-      </mat-form-field>
-      <br />
-      <mat-card-actions class="buttonSize">
-        <button class="buttonSize" mat-raised-button color="primary" (click)="onLogin()">Login</button>
-      </mat-card-actions>
-      <div>
-        <nav><a routerLink="/forgot"> forget password</a></nav><br />
-        <nav><a routerLink=""> register</a></nav>
+<div fxFlex="" fxLayoutAlign="center center" fxLayout.xs="column" style="height:100vh">
 
-      </div>
-  </mat-card-content> -->
-<div fxFlex="100" fxLayoutAlign="center center" fxLayout.xs="column" fxLayoutGap="20px">
-  <mat-card fxFlex.lg="58" fxFlex.md="60" fxFlex.sm="90" class="center1">
+  <mat-card fxFlex="100" fxFlex.lg="58" fxFlex.md="70" fxFlex.sm="90" class="center1">
     <div>
       <mat-card-header class="header">
         <mat-card-title>FundooNotes</mat-card-title>
@@ -39,7 +15,8 @@
           <div>
             <mat-form-field appearance="outline">
               <mat-label>First name</mat-label>
-              <input matInput>
+              <mat-error *ngIf="firstName.invalid">{{firstNameError()}}</mat-error>
+              <input matInput [formControl]="firstName">
             </mat-form-field>
           </div>
 
@@ -52,23 +29,34 @@
 
         </div>
       </div>
-      <div fxLayout="column">
-        <mat-form-field appearance="outline">
+      <div fxLayout="column" class="username">
+        <mat-form-field appearance="outline" class="user">
           <mat-label>Username name</mat-label>
           <mat-hint>You can use letters,numbers & periods</mat-hint>
           <input matInput>
+         
+        
         </mat-form-field>
+        <div fxLayout="row" fxFlex fxLayoutAlign=" space-around end">
+            <img mat-card-xl-image src="/assets/account.svg" alt="text">
+          </div> 
       </div>
-      <div fxLayout="column" fxLayoutGap="20px">
+    
+     
+      <div fxLayout="column" fxLayoutGap="10px">
+          
         <div><button mat-button color="primary" routerLink='/forgot' class="color">Use my current email address
             instead</button>
         </div>
         <div fxLayout="row" fxLayoutGap="20px">
+
           <div>
             <mat-form-field appearance="outline">
               <mat-label>Password</mat-label>
               <input matInput>
+              <mat-hint>Use 8 or more characters with a mix of letters, numbers & symbols</mat-hint>
             </mat-form-field>
+
           </div>
           <div>
             <mat-form-field appearance="outline">
@@ -76,24 +64,25 @@
               <input matInput>
             </mat-form-field>
           </div>
+          <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </div>
+        <div fxLayout=" row" fxLayoutAlign="start" fxLayoutGap="10%">
+          <div>
+            <button mat-raised-button value="1">Advance</button>
+          </div>
+          <div>
+            <button mat-raised-button value="2">Basic</button>
+          </div>
 
-<div fxLayout=" row" fxLayoutAlign="start" fxLayoutGap="10%">
-    <div>
-        <mat-radio-button  mat-button value="1">Advance</mat-radio-button></div>
-<div>        <mat-radio-button mat-raised-button value="2">Basic</mat-radio-button></div>
-    
-</div> 
-
-
-        <div fxLayout="row"  fxLayoutAlign="start" fxLayoutGap="40%">
-          
+        </div>
+        <div fxLayout="row" fxLayoutAlign="start" fxLayoutGap="40%">
           <div><button mat-button color="primary" routerLink='/register' class="color">Sign in instead</button>
           </div>
-          
-          <div><mat-card-actions>
+          <div>
+            <mat-card-actions>
               <button mat-raised-button color="primary" (click)="onLogin()" class="button">Next </button>
-            </mat-card-actions></div>
+            </mat-card-actions>
+          </div>
         </div>
       </div>
     </mat-card-content>

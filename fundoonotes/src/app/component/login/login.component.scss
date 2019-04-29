@@ -2,21 +2,42 @@
   justify-content: center;
 }
 
+// @media(max-width:480px){
+//   .h1{
+//   background-color: RED;
+//   }
+
+// }
+
+@media(min-width:320px){
 .center1{
 margin-left: 1%;
 // margin-top: 5%;
 color: #202124;
 border: solid 0.3px;
 height: 510px;
-box-shadow: #202124;
 border-radius: 10px; 
 }
+} 
 @media screen and (max-width: 2560px) {
   .button{
     float: none;
     width: 100%;
   }
 }
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.butt{
+  // background-color:#3e7ae6;
+  // margin-right:30px;
+  padding:2px 50px;
+}
+// @media (min-width:320px)
+// {
+// 
+
 // .button{
 
 //   width:10px;
@@ -39,12 +60,12 @@ text-align: center;
 // }
 
 
-  .text{
-width: 400px;
-margin-left: 10px;
-margin-top: 25px;
+//   .text{
+// width: 400px;
+// margin-left: 10px;
+// margin-top: 25px;
 
-}
+// }
 .subtitle1{
 font-weight: 400;
 line-height: 32px;
